@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F16154262DB3E3C6001E3C16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154252DB3E3C6001E3C16 /* AppDelegate.swift */; };
+		F16154282DB3E3C6001E3C16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154272DB3E3C6001E3C16 /* ViewController.swift */; };
+		F161542B2DB3E3C6001E3C16 /* VineNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16154292DB3E3C6001E3C16 /* VineNotes.xcdatamodeld */; };
+		F161542D2DB3E3C8001E3C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F161542C2DB3E3C8001E3C16 /* Assets.xcassets */; };
+		F16154302DB3E3C8001E3C16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F161542E2DB3E3C8001E3C16 /* Main.storyboard */; };
+		F161543B2DB3E3C9001E3C16 /* VineNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161543A2DB3E3C9001E3C16 /* VineNotesTests.swift */; };
+		F16154452DB3E3C9001E3C16 /* VineNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */; };
+		F16154472DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F16154372DB3E3C9001E3C16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F161541A2DB3E3C6001E3C16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16154212DB3E3C6001E3C16;
+			remoteInfo = VineNotes;
+		};
+		F16154412DB3E3C9001E3C16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F161541A2DB3E3C6001E3C16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16154212DB3E3C6001E3C16;
+			remoteInfo = VineNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F16154222DB3E3C6001E3C16 /* VineNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VineNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16154252DB3E3C6001E3C16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F16154272DB3E3C6001E3C16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F161542A2DB3E3C6001E3C16 /* VineNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VineNotes.xcdatamodel; sourceTree = "<group>"; };
+		F161542C2DB3E3C8001E3C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F161542F2DB3E3C8001E3C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F16154312DB3E3C8001E3C16 /* VineNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VineNotes.entitlements; sourceTree = "<group>"; };
+		F16154362DB3E3C9001E3C16 /* VineNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VineNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F161543A2DB3E3C9001E3C16 /* VineNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesTests.swift; sourceTree = "<group>"; };
+		F16154402DB3E3C9001E3C16 /* VineNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VineNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITests.swift; sourceTree = "<group>"; };
+		F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F161541F2DB3E3C6001E3C16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16154332DB3E3C9001E3C16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F161543D2DB3E3C9001E3C16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F16154192DB3E3C6001E3C16 = {
+			isa = PBXGroup;
+			children = (
+				F16154242DB3E3C6001E3C16 /* VineNotes */,
+				F16154392DB3E3C9001E3C16 /* VineNotesTests */,
+				F16154432DB3E3C9001E3C16 /* VineNotesUITests */,
+				F16154232DB3E3C6001E3C16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16154232DB3E3C6001E3C16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16154222DB3E3C6001E3C16 /* VineNotes.app */,
+				F16154362DB3E3C9001E3C16 /* VineNotesTests.xctest */,
+				F16154402DB3E3C9001E3C16 /* VineNotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16154242DB3E3C6001E3C16 /* VineNotes */ = {
+			isa = PBXGroup;
+			children = (
+				F16154252DB3E3C6001E3C16 /* AppDelegate.swift */,
+				F16154272DB3E3C6001E3C16 /* ViewController.swift */,
+				F161542C2DB3E3C8001E3C16 /* Assets.xcassets */,
+				F161542E2DB3E3C8001E3C16 /* Main.storyboard */,
+				F16154312DB3E3C8001E3C16 /* VineNotes.entitlements */,
+				F16154292DB3E3C6001E3C16 /* VineNotes.xcdatamodeld */,
+			);
+			path = VineNotes;
+			sourceTree = "<group>";
+		};
+		F16154392DB3E3C9001E3C16 /* VineNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F161543A2DB3E3C9001E3C16 /* VineNotesTests.swift */,
+			);
+			path = VineNotesTests;
+			sourceTree = "<group>";
+		};
+		F16154432DB3E3C9001E3C16 /* VineNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */,
+				F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */,
+			);
+			path = VineNotesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16154212DB3E3C6001E3C16 /* VineNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F161544A2DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotes" */;
+			buildPhases = (
+				F161541E2DB3E3C6001E3C16 /* Sources */,
+				F161541F2DB3E3C6001E3C16 /* Frameworks */,
+				F16154202DB3E3C6001E3C16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VineNotes;
+			productName = VineNotes;
+			productReference = F16154222DB3E3C6001E3C16 /* VineNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F16154352DB3E3C9001E3C16 /* VineNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F161544D2DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotesTests" */;
+			buildPhases = (
+				F16154322DB3E3C9001E3C16 /* Sources */,
+				F16154332DB3E3C9001E3C16 /* Frameworks */,
+				F16154342DB3E3C9001E3C16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16154382DB3E3C9001E3C16 /* PBXTargetDependency */,
+			);
+			name = VineNotesTests;
+			productName = VineNotesTests;
+			productReference = F16154362DB3E3C9001E3C16 /* VineNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F161543F2DB3E3C9001E3C16 /* VineNotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16154502DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotesUITests" */;
+			buildPhases = (
+				F161543C2DB3E3C9001E3C16 /* Sources */,
+				F161543D2DB3E3C9001E3C16 /* Frameworks */,
+				F161543E2DB3E3C9001E3C16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16154422DB3E3C9001E3C16 /* PBXTargetDependency */,
+			);
+			name = VineNotesUITests;
+			productName = VineNotesUITests;
+			productReference = F16154402DB3E3C9001E3C16 /* VineNotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F161541A2DB3E3C6001E3C16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F16154212DB3E3C6001E3C16 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F16154352DB3E3C9001E3C16 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F16154212DB3E3C6001E3C16;
+					};
+					F161543F2DB3E3C9001E3C16 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F16154212DB3E3C6001E3C16;
+					};
+				};
+			};
+			buildConfigurationList = F161541D2DB3E3C6001E3C16 /* Build configuration list for PBXProject "VineNotes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16154192DB3E3C6001E3C16;
+			productRefGroup = F16154232DB3E3C6001E3C16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16154212DB3E3C6001E3C16 /* VineNotes */,
+				F16154352DB3E3C9001E3C16 /* VineNotesTests */,
+				F161543F2DB3E3C9001E3C16 /* VineNotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16154202DB3E3C6001E3C16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F161542D2DB3E3C8001E3C16 /* Assets.xcassets in Resources */,
+				F16154302DB3E3C8001E3C16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16154342DB3E3C9001E3C16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F161543E2DB3E3C9001E3C16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F161541E2DB3E3C6001E3C16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16154282DB3E3C6001E3C16 /* ViewController.swift in Sources */,
+				F16154262DB3E3C6001E3C16 /* AppDelegate.swift in Sources */,
+				F161542B2DB3E3C6001E3C16 /* VineNotes.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16154322DB3E3C9001E3C16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F161543B2DB3E3C9001E3C16 /* VineNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F161543C2DB3E3C9001E3C16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16154472DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift in Sources */,
+				F16154452DB3E3C9001E3C16 /* VineNotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F16154382DB3E3C9001E3C16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16154212DB3E3C6001E3C16 /* VineNotes */;
+			targetProxy = F16154372DB3E3C9001E3C16 /* PBXContainerItemProxy */;
+		};
+		F16154422DB3E3C9001E3C16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16154212DB3E3C6001E3C16 /* VineNotes */;
+			targetProxy = F16154412DB3E3C9001E3C16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F161542E2DB3E3C8001E3C16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F161542F2DB3E3C8001E3C16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F16154482DB3E3C9001E3C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F16154492DB3E3C9001E3C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F161544B2DB3E3C9001E3C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VineNotes/VineNotes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F161544C2DB3E3C9001E3C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VineNotes/VineNotes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F161544E2DB3E3C9001E3C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VineNotes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VineNotes";
+			};
+			name = Debug;
+		};
+		F161544F2DB3E3C9001E3C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VineNotes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VineNotes";
+			};
+			name = Release;
+		};
+		F16154512DB3E3C9001E3C16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VineNotes;
+			};
+			name = Debug;
+		};
+		F16154522DB3E3C9001E3C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NealST.VineNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VineNotes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F161541D2DB3E3C6001E3C16 /* Build configuration list for PBXProject "VineNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16154482DB3E3C9001E3C16 /* Debug */,
+				F16154492DB3E3C9001E3C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F161544A2DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F161544B2DB3E3C9001E3C16 /* Debug */,
+				F161544C2DB3E3C9001E3C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F161544D2DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F161544E2DB3E3C9001E3C16 /* Debug */,
+				F161544F2DB3E3C9001E3C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16154502DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16154512DB3E3C9001E3C16 /* Debug */,
+				F16154522DB3E3C9001E3C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F16154292DB3E3C6001E3C16 /* VineNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F161542A2DB3E3C6001E3C16 /* VineNotes.xcdatamodel */,
+			);
+			currentVersion = F161542A2DB3E3C6001E3C16 /* VineNotes.xcdatamodel */;
+			path = VineNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F161541A2DB3E3C6001E3C16 /* Project object */;
+}
