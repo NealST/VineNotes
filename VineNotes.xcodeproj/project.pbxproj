@@ -15,6 +15,7 @@
 		F161543B2DB3E3C9001E3C16 /* VineNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161543A2DB3E3C9001E3C16 /* VineNotesTests.swift */; };
 		F16154452DB3E3C9001E3C16 /* VineNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */; };
 		F16154472DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */; };
+		F16154542DB4ECA4001E3C16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F16154532DB4ECA4001E3C16 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F16154402DB3E3C9001E3C16 /* VineNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VineNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITests.swift; sourceTree = "<group>"; };
 		F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F16154532DB4ECA4001E3C16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F16154192DB3E3C6001E3C16 = {
 			isa = PBXGroup;
 			children = (
+				F16154532DB4ECA4001E3C16 /* Podfile */,
 				F16154242DB3E3C6001E3C16 /* VineNotes */,
 				F16154392DB3E3C9001E3C16 /* VineNotesTests */,
 				F16154432DB3E3C9001E3C16 /* VineNotesUITests */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16154542DB4ECA4001E3C16 /* Podfile in Resources */,
 				F161542D2DB3E3C8001E3C16 /* Assets.xcassets in Resources */,
 				F16154302DB3E3C8001E3C16 /* Main.storyboard in Resources */,
 			);
