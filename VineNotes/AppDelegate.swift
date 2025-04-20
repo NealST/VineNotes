@@ -8,13 +8,36 @@
 import Cocoa
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
+    var prefsWindowController: PrefsWindowController?
+    var aboutWindowController: AboutWindowController?
+    var statusItem: NSStatusItem?
     
-
+    public var urls: [URL]? = nil
+    public var url: URL? = nil
+    public var newName: String? = nil
+    public var newContent: String? = nil
+    
+    public static var mainWindowController: MainWindowController?
+    public static var noteWindows = [NSWindowController]()
+    
+    public static var appTitle: String {
+            let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+            return name ?? Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
+        }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+                
+                guard let mainWC = storyboard.instantiateController(withIdentifier: "MainWindowController") as? MainWindowController else {
+                    fatalError("Error getting main window controller")
+                }
+                
+                AppDelegate.mainWindowController = mainWC
+                mainWC.window?.makeKeyAndOrderFront(nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -14,7 +14,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     
     override func windowDidLoad() {
         
-        
+        AppDelegate.mainWindowController = self
         
         self.window?.hidesOnDeactivate = UserDefaultsManagement.hideOnDeactivate
         self.window?.titleVisibility = .hidden
@@ -60,6 +60,10 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
             }
             
             return notesListUndoManager
+        }
+    
+        public static func shared() -> NSWindow? {
+            return AppDelegate.mainWindowController?.window
         }
 
         func windowDidEnterFullScreen(_ notification: Notification) {
