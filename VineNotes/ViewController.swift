@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  VineNotes
 //
-//  Created by mozheng on 2025/4/19.
+//  Created by NealST on 2025/4/19.
 //
 
 import Cocoa

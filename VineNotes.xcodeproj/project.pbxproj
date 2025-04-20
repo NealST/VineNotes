@@ -16,6 +16,10 @@
 		F16154452DB3E3C9001E3C16 /* VineNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */; };
 		F16154472DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */; };
 		F16154542DB4ECA4001E3C16 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F16154532DB4ECA4001E3C16 /* Podfile */; };
+		F16154562DB5231F001E3C16 /* PrefsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154552DB5231F001E3C16 /* PrefsWindowController.swift */; };
+		F16154582DB5241F001E3C16 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154572DB5241F001E3C16 /* AboutWindowController.swift */; };
+		F161545A2DB524E9001E3C16 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154592DB524E9001E3C16 /* MainWindowController.swift */; };
+		F161545D2DB52847001E3C16 /* UserDefaultsManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161545C2DB52847001E3C16 /* UserDefaultsManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		F16154442DB3E3C9001E3C16 /* VineNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITests.swift; sourceTree = "<group>"; };
 		F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F16154532DB4ECA4001E3C16 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F16154552DB5231F001E3C16 /* PrefsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsWindowController.swift; sourceTree = "<group>"; };
+		F16154572DB5241F001E3C16 /* AboutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
+		F16154592DB524E9001E3C16 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		F161545C2DB52847001E3C16 /* UserDefaultsManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +108,16 @@
 		F16154242DB3E3C6001E3C16 /* VineNotes */ = {
 			isa = PBXGroup;
 			children = (
+				F161545B2DB5281E001E3C16 /* Helpers */,
 				F16154252DB3E3C6001E3C16 /* AppDelegate.swift */,
 				F16154272DB3E3C6001E3C16 /* ViewController.swift */,
 				F161542C2DB3E3C8001E3C16 /* Assets.xcassets */,
 				F161542E2DB3E3C8001E3C16 /* Main.storyboard */,
 				F16154312DB3E3C8001E3C16 /* VineNotes.entitlements */,
 				F16154292DB3E3C6001E3C16 /* VineNotes.xcdatamodeld */,
+				F16154552DB5231F001E3C16 /* PrefsWindowController.swift */,
+				F16154572DB5241F001E3C16 /* AboutWindowController.swift */,
+				F16154592DB524E9001E3C16 /* MainWindowController.swift */,
 			);
 			path = VineNotes;
 			sourceTree = "<group>";
@@ -125,6 +137,14 @@
 				F16154462DB3E3C9001E3C16 /* VineNotesUITestsLaunchTests.swift */,
 			);
 			path = VineNotesUITests;
+			sourceTree = "<group>";
+		};
+		F161545B2DB5281E001E3C16 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F161545C2DB52847001E3C16 /* UserDefaultsManagement.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16154282DB3E3C6001E3C16 /* ViewController.swift in Sources */,
+				F16154582DB5241F001E3C16 /* AboutWindowController.swift in Sources */,
+				F161545A2DB524E9001E3C16 /* MainWindowController.swift in Sources */,
+				F161545D2DB52847001E3C16 /* UserDefaultsManagement.swift in Sources */,
 				F16154262DB3E3C6001E3C16 /* AppDelegate.swift in Sources */,
+				F16154562DB5231F001E3C16 /* PrefsWindowController.swift in Sources */,
 				F161542B2DB3E3C6001E3C16 /* VineNotes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

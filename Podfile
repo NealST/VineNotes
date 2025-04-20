@@ -8,8 +8,6 @@ target 'VineNotes' do
 
   # Pods for VineNotes
   
-  
-  
   target 'VineNotesTests' do
     inherit! :search_paths
     # Pods for testing
