@@ -1,0 +1,55 @@
+PODS:
+  - Alamofire (5.10.2)
+  - AppCenter (5.0.6):
+    - AppCenter/Analytics (= 5.0.6)
+    - AppCenter/Crashes (= 5.0.6)
+  - AppCenter/Analytics (5.0.6):
+    - AppCenter/Core
+  - AppCenter/Core (5.0.6)
+  - AppCenter/Crashes (5.0.6):
+    - AppCenter/Core
+  - Highlightr (2.1.0)
+  - libcmark_gfm (0.29.4)
+  - MASShortcut (2.4.0)
+  - Sparkle (2.7.0)
+  - SSZipArchive (2.6.0)
+  - SwiftLint (0.59.1)
+  - SwiftyJSON (5.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AppCenter
+  - Highlightr
+  - libcmark_gfm
+  - MASShortcut
+  - Sparkle
+  - SSZipArchive
+  - SwiftLint
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AppCenter
+    - Highlightr
+    - libcmark_gfm
+    - MASShortcut
+    - Sparkle
+    - SSZipArchive
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  AppCenter: 395cc12b428b8fdf12e9f92294d93a55bac389e4
+  Highlightr: 595f3e100737c8de41113385da8bd0b5b65212c6
+  libcmark_gfm: aed11fc48515bec53902b0fd4cddcbd42b5e94c2
+  MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
+  Sparkle: 9c328bdcfbcaf8f030c4b678eadfd0fcb03822d8
+  SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
+  SwiftLint: 3d48e2fb2a3468fdaccf049e5e755df22fb40c2c
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+
+PODFILE CHECKSUM: a9b07e5a494b01b0b43937ebfb8b5bc18fceacc7
+
+COCOAPODS: 1.16.2

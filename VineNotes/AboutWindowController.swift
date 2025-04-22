@@ -2,7 +2,7 @@
 //  AboutWindowController.swift
 //  VineNotes
 //
-//  Created by mozheng on 2025/4/20.
+//  Created by NealST on 2025/4/20.
 //
 
 import Cocoa

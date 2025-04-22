@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenterAnalytics.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenter.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenterCrashes.bundle

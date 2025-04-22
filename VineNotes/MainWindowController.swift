@@ -16,6 +16,7 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
         
         AppDelegate.mainWindowController = self
         
+        self.window?.isMovableByWindowBackground = true
         self.window?.hidesOnDeactivate = UserDefaultsManagement.hideOnDeactivate
         self.window?.titleVisibility = .hidden
         self.window?.titlebarAppearsTransparent = true
@@ -64,6 +65,14 @@ class MainWindowController: NSWindowController, NSWindowDelegate {
     
         public static func shared() -> NSWindow? {
             return AppDelegate.mainWindowController?.window
+        }
+    
+    func windowWillEnterFullScreen(_ notification: Notification) {
+            UserDefaultsManagement.isWillFullScreen = true
+        }
+
+        func windowWillExitFullScreen(_ notification: Notification) {
+            UserDefaultsManagement.isWillFullScreen = false
         }
 
         func windowDidEnterFullScreen(_ notification: Notification) {

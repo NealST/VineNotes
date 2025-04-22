@@ -12,6 +12,6 @@ class PrefsWindowController: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window?.delegate = self
-        self.window?.title = NSLocalizedString("Settings", comment: "")
+        self.window?.title = NSLocalizedString("Preferences", comment: "")
     }
 }

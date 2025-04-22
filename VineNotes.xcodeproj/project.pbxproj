@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0B927D218DAE536AD49D397 /* Pods_VineNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659BF1FC731186C072C243AF /* Pods_VineNotes.framework */; };
 		F16154262DB3E3C6001E3C16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154252DB3E3C6001E3C16 /* AppDelegate.swift */; };
 		F16154282DB3E3C6001E3C16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154272DB3E3C6001E3C16 /* ViewController.swift */; };
 		F161542B2DB3E3C6001E3C16 /* VineNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16154292DB3E3C6001E3C16 /* VineNotes.xcdatamodeld */; };
@@ -20,6 +21,14 @@
 		F16154582DB5241F001E3C16 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154572DB5241F001E3C16 /* AboutWindowController.swift */; };
 		F161545A2DB524E9001E3C16 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16154592DB524E9001E3C16 /* MainWindowController.swift */; };
 		F161545D2DB52847001E3C16 /* UserDefaultsManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161545C2DB52847001E3C16 /* UserDefaultsManagement.swift */; };
+		F1D261222DB67BC700E109E7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D261212DB67BC700E109E7 /* AboutViewController.swift */; };
+		F1D261242DB67C2C00E109E7 /* AppDelegate+URLRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D261232DB67C2C00E109E7 /* AppDelegate+URLRoutes.swift */; };
+		F1D261262DB67C8100E109E7 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D261252DB67C8100E109E7 /* ContentViewController.swift */; };
+		F1D261282DB67CFB00E109E7 /* DetachedWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D261272DB67CFB00E109E7 /* DetachedWindowController.swift */; };
+		F1D2612A2DB67D8B00E109E7 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D261292DB67D8B00E109E7 /* MainWindow.swift */; };
+		F1D2612C2DB67FB800E109E7 /* PreferencesGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2612B2DB67FB800E109E7 /* PreferencesGeneralViewController.swift */; };
+		F1D2612E2DB6805A00E109E7 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2612D2DB6805A00E109E7 /* PrefsViewController.swift */; };
+		F1D261302DB680DA00E109E7 /* ProjectSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2612F2DB680DA00E109E7 /* ProjectSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		659BF1FC731186C072C243AF /* Pods_VineNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VineNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0111F8BBF045BEEDEA2020D /* Pods-VineNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VineNotes.release.xcconfig"; path = "Target Support Files/Pods-VineNotes/Pods-VineNotes.release.xcconfig"; sourceTree = "<group>"; };
+		F09308C745EB74B04C3EF080 /* Pods-VineNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VineNotes.debug.xcconfig"; path = "Target Support Files/Pods-VineNotes/Pods-VineNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		F16154222DB3E3C6001E3C16 /* VineNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VineNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16154252DB3E3C6001E3C16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16154272DB3E3C6001E3C16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,14 @@
 		F16154572DB5241F001E3C16 /* AboutWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		F16154592DB524E9001E3C16 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F161545C2DB52847001E3C16 /* UserDefaultsManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagement.swift; sourceTree = "<group>"; };
+		F1D261212DB67BC700E109E7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		F1D261232DB67C2C00E109E7 /* AppDelegate+URLRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+URLRoutes.swift"; sourceTree = "<group>"; };
+		F1D261252DB67C8100E109E7 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		F1D261272DB67CFB00E109E7 /* DetachedWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachedWindowController.swift; sourceTree = "<group>"; };
+		F1D261292DB67D8B00E109E7 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		F1D2612B2DB67FB800E109E7 /* PreferencesGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesGeneralViewController.swift; sourceTree = "<group>"; };
+		F1D2612D2DB6805A00E109E7 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		F1D2612F2DB680DA00E109E7 /* ProjectSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B927D218DAE536AD49D397 /* Pods_VineNotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B03E34566F4BD28C0264BB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F09308C745EB74B04C3EF080 /* Pods-VineNotes.debug.xcconfig */,
+				E0111F8BBF045BEEDEA2020D /* Pods-VineNotes.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7BE3AB8988EE4BBC51227BFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				659BF1FC731186C072C243AF /* Pods_VineNotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F16154192DB3E3C6001E3C16 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +131,8 @@
 				F16154392DB3E3C9001E3C16 /* VineNotesTests */,
 				F16154432DB3E3C9001E3C16 /* VineNotesUITests */,
 				F16154232DB3E3C6001E3C16 /* Products */,
+				3B03E34566F4BD28C0264BB7 /* Pods */,
+				7BE3AB8988EE4BBC51227BFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +159,14 @@
 				F16154552DB5231F001E3C16 /* PrefsWindowController.swift */,
 				F16154572DB5241F001E3C16 /* AboutWindowController.swift */,
 				F16154592DB524E9001E3C16 /* MainWindowController.swift */,
+				F1D261212DB67BC700E109E7 /* AboutViewController.swift */,
+				F1D261232DB67C2C00E109E7 /* AppDelegate+URLRoutes.swift */,
+				F1D261252DB67C8100E109E7 /* ContentViewController.swift */,
+				F1D261272DB67CFB00E109E7 /* DetachedWindowController.swift */,
+				F1D261292DB67D8B00E109E7 /* MainWindow.swift */,
+				F1D2612B2DB67FB800E109E7 /* PreferencesGeneralViewController.swift */,
+				F1D2612D2DB6805A00E109E7 /* PrefsViewController.swift */,
+				F1D2612F2DB680DA00E109E7 /* ProjectSettingsViewController.swift */,
 			);
 			path = VineNotes;
 			sourceTree = "<group>";
@@ -154,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F161544A2DB3E3C9001E3C16 /* Build configuration list for PBXNativeTarget "VineNotes" */;
 			buildPhases = (
+				4056CB6D7EB1053B7B6AA354 /* [CP] Check Pods Manifest.lock */,
 				F161541E2DB3E3C6001E3C16 /* Sources */,
 				F161541F2DB3E3C6001E3C16 /* Frameworks */,
 				F16154202DB3E3C6001E3C16 /* Resources */,
+				6A87ED8BD65456BD73B63AFC /* [CP] Embed Pods Frameworks */,
+				70B94BDE5B4449B3DFD6F7BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,18 +325,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4056CB6D7EB1053B7B6AA354 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VineNotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A87ED8BD65456BD73B63AFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70B94BDE5B4449B3DFD6F7BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VineNotes/Pods-VineNotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F161541E2DB3E3C6001E3C16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D261262DB67C8100E109E7 /* ContentViewController.swift in Sources */,
 				F16154282DB3E3C6001E3C16 /* ViewController.swift in Sources */,
 				F16154582DB5241F001E3C16 /* AboutWindowController.swift in Sources */,
 				F161545A2DB524E9001E3C16 /* MainWindowController.swift in Sources */,
+				F1D2612A2DB67D8B00E109E7 /* MainWindow.swift in Sources */,
+				F1D261302DB680DA00E109E7 /* ProjectSettingsViewController.swift in Sources */,
+				F1D261242DB67C2C00E109E7 /* AppDelegate+URLRoutes.swift in Sources */,
 				F161545D2DB52847001E3C16 /* UserDefaultsManagement.swift in Sources */,
 				F16154262DB3E3C6001E3C16 /* AppDelegate.swift in Sources */,
 				F16154562DB5231F001E3C16 /* PrefsWindowController.swift in Sources */,
+				F1D2612C2DB67FB800E109E7 /* PreferencesGeneralViewController.swift in Sources */,
+				F1D261282DB67CFB00E109E7 /* DetachedWindowController.swift in Sources */,
+				F1D261222DB67BC700E109E7 /* AboutViewController.swift in Sources */,
 				F161542B2DB3E3C6001E3C16 /* VineNotes.xcdatamodeld in Sources */,
+				F1D2612E2DB6805A00E109E7 /* PrefsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +571,7 @@
 		};
 		F161544B2DB3E3C9001E3C16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09308C745EB74B04C3EF080 /* Pods-VineNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +597,7 @@
 		};
 		F161544C2DB3E3C9001E3C16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0111F8BBF045BEEDEA2020D /* Pods-VineNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

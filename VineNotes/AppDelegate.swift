@@ -2,148 +2,265 @@
 //  AppDelegate.swift
 //  VineNotes
 //
-//  Created by mozheng on 2025/4/19.
+//  Created by NealST on 2025/4/19.
 //
 
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 import Cocoa
+import Sparkle
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
-
+    var mainWindowController: MainWindowController?
     var prefsWindowController: PrefsWindowController?
     var aboutWindowController: AboutWindowController?
     var statusItem: NSStatusItem?
-    
-    public var urls: [URL]? = nil
-    public var url: URL? = nil
-    public var newName: String? = nil
-    public var newContent: String? = nil
-    
-    public static var mainWindowController: MainWindowController?
-    public static var noteWindows = [NSWindowController]()
-    
-    public static var appTitle: String {
-            let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
-            return name ?? Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
-        }
+
+    public var urls: [URL]?
+    public var searchQuery: String?
+    public var newName: String?
+    public var newContent: String?
+
+    var appTitle: String {
+        let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+        return name ?? Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
+    }
+
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        let storage = Storage.sharedInstance()
+        storage.loadProjects()
+        storage.loadDocuments {}
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-                
-                guard let mainWC = storyboard.instantiateController(withIdentifier: "MainWindowController") as? MainWindowController else {
-                    fatalError("Error getting main window controller")
+        // Ensure the font panel is closed when the app starts, in case it was
+        // left open when the app quit.
+        NSFontManager.shared.fontPanel(false)?.orderOut(self)
+
+        applyAppearance()
+
+        #if CLOUDKIT
+        if let iCloudDocumentsURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents").resolvingSymlinksInPath() {
+            if !FileManager.default.fileExists(atPath: iCloudDocumentsURL.path, isDirectory: nil) {
+                do {
+                    try FileManager.default.createDirectory(at: iCloudDocumentsURL, withIntermediateDirectories: true, attributes: nil)
+                } catch {
+                    print("Home directory creation: \(error)")
                 }
-                
-                AppDelegate.mainWindowController = mainWC
-                mainWC.window?.makeKeyAndOrderFront(nil)
+            }
+        }
+        #endif
+
+        if UserDefaultsManagement.storagePath == nil {
+            requestStorageDirectory()
+            return
+        }
+
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+
+        guard let mainWC = storyboard.instantiateController(withIdentifier: "MainWindowController") as? MainWindowController else {
+            fatalError("Error getting main window controller")
+        }
+
+        if UserDefaultsManagement.isFirstLaunch {
+            let size = NSSize(width: 1280, height: 700)
+            mainWC.window?.setContentSize(size)
+            mainWC.window?.center()
+        }
+        mainWC.window?.makeKeyAndOrderFront(nil)
+        mainWindowController = mainWC
+
+        AppCenter.start(withAppSecret: "e4d22300-3bd7-427f-8f3c-41f315c2bb76", services: [
+            Analytics.self,
+            Crashes.self,
+        ])
+        Analytics.trackEvent("MiaoYan Attribute", withProperties: [
+            "Appearance": String(UserDataService.instance.isDark),
+            "SingleMode": String(UserDefaultsManagement.isSingleMode),
+            "Language": String(UserDefaultsManagement.defaultLanguage),
+            "UploadType": UserDefaultsManagement.defaultPicUpload,
+            "EditorFont": UserDefaultsManagement.fontName,
+            "PreviewFont": UserDefaultsManagement.previewFontName,
+            "WindowFont": UserDefaultsManagement.windowFontName,
+            "EditorFontSize": String(UserDefaultsManagement.fontSize),
+            "PreviewFontSize": String(UserDefaultsManagement.previewFontSize),
+            "CodeFont": UserDefaultsManagement.codeFontName,
+            "PreviewWidth": UserDefaultsManagement.previewWidth,
+            "PreviewLocation": UserDefaultsManagement.previewLocation,
+            "ButtonShow": UserDefaultsManagement.buttonShow,
+            "EditorLineBreak": UserDefaultsManagement.editorLineBreak,
+        ])
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if !flag {
+            mainWindowController?.makeNew()
+        } else {
+            mainWindowController?.refreshEditArea()
+        }
 
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
 
-    // MARK: - Core Data stack
+    func applicationWillTerminate(_ notification: Notification) {
+        let webkitPreview = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("wkPreview")
+        try? FileManager.default.removeItem(at: webkitPreview)
 
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "VineNotes")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error)")
-            }
-        })
-        return container
-    }()
+        var temporary = URL(fileURLWithPath: NSTemporaryDirectory())
+        temporary.appendPathComponent("ThumbnailsBig")
+        try? FileManager.default.removeItem(at: temporary)
+    }
 
-    // MARK: - Core Data Saving and Undo support
+    private func applyAppearance() {
+        if #available(OSX 10.14, *) {
+            if UserDefaultsManagement.appearanceType != .Custom {
+                if UserDefaultsManagement.appearanceType == .Dark {
+                    NSApp.appearance = NSAppearance(named: NSAppearance.Name.darkAqua)
+                    UserDataService.instance.isDark = true
+                }
 
-    func save() {
-        // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
-        let context = persistentContainer.viewContext
+                if UserDefaultsManagement.appearanceType == .Light {
+                    NSApp.appearance = NSAppearance(named: NSAppearance.Name.aqua)
+                    UserDataService.instance.isDark = false
+                }
 
-        if !context.commitEditing() {
-            NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing before saving")
-        }
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Customize this code block to include application-specific recovery steps.
-                let nserror = error as NSError
-                NSApplication.shared.presentError(nserror)
+                if UserDefaultsManagement.appearanceType == .System, NSAppearance.current.isDark {
+                    UserDataService.instance.isDark = true
+                }
+            } else {
+                NSApp.appearance = NSAppearance(named: NSAppearance.Name.aqua)
             }
         }
     }
 
-    func windowWillReturnUndoManager(window: NSWindow) -> UndoManager? {
-        // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.
-        return persistentContainer.viewContext.undoManager
+    private func restartApp() {
+        guard let resourcePath = Bundle.main.resourcePath else { return }
+
+        let url = URL(fileURLWithPath: resourcePath)
+        let path = url.deletingLastPathComponent().deletingLastPathComponent().absoluteString
+        let task = Process()
+
+        task.launchPath = "/usr/bin/open"
+        task.arguments = [path]
+        task.launch()
+
+        exit(0)
     }
 
-    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
-        // Save changes in the application's managed object context before the application terminates.
-        let context = persistentContainer.viewContext
-        
-        if !context.commitEditing() {
-            NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing to terminate")
-            return .terminateCancel
+    private func requestStorageDirectory() {
+        var directoryURL: URL?
+        if let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+            directoryURL = URL(fileURLWithPath: path)
         }
-        
-        if !context.hasChanges {
-            return .terminateNow
-        }
-        
-        do {
-            try context.save()
-        } catch {
-            let nserror = error as NSError
 
-            // Customize this code block to include application-specific recovery steps.
-            let result = sender.presentError(nserror)
-            if (result) {
-                return .terminateCancel
-            }
-            
-            let question = NSLocalizedString("Could not save changes while quitting. Quit anyway?", comment: "Quit without saves error question message")
-            let info = NSLocalizedString("Quitting now will lose any changes you have made since the last successful save", comment: "Quit without saves error question info");
-            let quitButton = NSLocalizedString("Quit anyway", comment: "Quit anyway button title")
-            let cancelButton = NSLocalizedString("Cancel", comment: "Cancel button title")
-            let alert = NSAlert()
-            alert.messageText = question
-            alert.informativeText = info
-            alert.addButton(withTitle: quitButton)
-            alert.addButton(withTitle: cancelButton)
-            
-            let answer = alert.runModal()
-            if answer == .alertSecondButtonReturn {
-                return .terminateCancel
+        let panel = NSOpenPanel()
+        panel.directoryURL = directoryURL
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = true
+        panel.canChooseFiles = false
+        panel.canCreateDirectories = true
+        panel.message = "Please select default storage directory"
+        panel.begin { result in
+            if result == NSApplication.ModalResponse.OK {
+                guard let url = panel.url else {
+                    return
+                }
+                UserDefaultsManagement.storagePath = url.path
+
+                self.restartApp()
+            } else {
+                exit(EXIT_SUCCESS)
             }
         }
-        // If we got here, it is time to quit.
-        return .terminateNow
     }
 
+    // MARK: IBActions
+
+    @IBAction func openMainWindow(_ sender: Any) {
+        mainWindowController?.makeNew()
+    }
+
+    @IBAction func openMiaoYan(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://miaoyan.app")!)
+    }
+
+    @IBAction func openCats(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://miaoyan.app/cats.html")!)
+    }
+
+    @IBAction func openGithub(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://github.com/tw93/MiaoYan")!)
+    }
+
+    @IBAction func openRelease(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://github.com/tw93/MiaoYan/releases")!)
+    }
+
+    @IBAction func openTwitter(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://twitter.com/intent/follow?&original_referer=https://miaoyan.app&screen_name=HiTw93")!)
+    }
+
+    @IBAction func openIssue(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://github.com/tw93/MiaoYan/issues")!)
+    }
+
+    @IBAction func openTelegram(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: "https://t.me/+GclQS9ZnxyI2ODQ1")!)
+    }
+
+    @IBAction func openPreferences(_ sender: Any?) {
+        if prefsWindowController == nil {
+            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+            prefsWindowController = storyboard.instantiateController(withIdentifier: "Preferences") as? PrefsWindowController
+        }
+
+        guard let prefsWindowController = prefsWindowController else { return }
+
+        prefsWindowController.showWindow(nil)
+        prefsWindowController.window?.makeKeyAndOrderFront(prefsWindowController)
+
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    @IBAction func new(_ sender: Any?) {
+        mainWindowController?.makeNew()
+        NSApp.activate(ignoringOtherApps: true)
+        ViewController.shared()?.fileMenuNewNote(self)
+    }
+
+    @IBAction func searchAndCreate(_ sender: Any?) {
+        mainWindowController?.makeNew()
+        NSApp.activate(ignoringOtherApps: true)
+
+        guard let vc = ViewController.shared() else { return }
+
+        DispatchQueue.main.async {
+            vc.search.window?.makeFirstResponder(vc.search)
+        }
+    }
+
+    @IBAction func showAboutWindow(_ sender: AnyObject) {
+        if aboutWindowController == nil {
+            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+
+            aboutWindowController = storyboard.instantiateController(withIdentifier: "About") as? AboutWindowController
+        }
+
+        guard let aboutWindowController = aboutWindowController else { return }
+
+        aboutWindowController.showWindow(nil)
+        aboutWindowController.window?.makeKeyAndOrderFront(aboutWindowController)
+
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    func menuWillOpen(_ menu: NSMenu) {
+        guard let event = NSApp.currentEvent else { return }
+
+        if event.type == NSEvent.EventType.leftMouseDown {
+            mainWindowController?.makeNew()
+        }
+    }
 }
-
